@@ -9,7 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Facundo Cabral",
+    "url": "https://www.linkedin.com/in/facundo-cabral-90ab9122a/"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.5",
