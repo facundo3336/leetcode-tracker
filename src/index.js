@@ -1,5 +1,4 @@
-import { sayHi } from "./utils";
 import { render } from "react-dom";
-import { App } from "./App.js";
+import { App } from "./App.jsx";
 
 render(<App />, document.getElementById("root"));

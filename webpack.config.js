@@ -7,7 +7,10 @@ const rulesForSass = {
 };
 
 const rulesForJavascript = {
-  test: /\.js$/,
+  test: [/\.js$/, /\.jsx$/],
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
   loader: "babel-loader",
   options: {
     presets: [
