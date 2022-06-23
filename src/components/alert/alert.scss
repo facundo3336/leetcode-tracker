@@ -1,0 +1,58 @@
+@import "../../utils/color.scss";
+
+.alertContainer {
+  display: inline-block;
+  border: 1px solid;
+  padding: 15px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  .alertIconContainer {
+    padding-right: 15px;
+  }
+
+  .alertTextContainer {
+    word-break: break-all;
+    font-size: 1.05rem;
+  }
+
+  &.primary {
+    background-color: map-get($map: $colors, $key: "lighterPrimary");
+    border-color: map-get($map: $colors, $key: "lightPrimary");
+  }
+
+  &.secondary {
+    background-color: map-get($map: $colors, $key: "lighterSecondary");
+    border-color: map-get($map: $colors, $key: "lightSecondary");
+  }
+
+  &.success {
+    background-color: map-get($map: $colors, $key: "lighterSuccess");
+    border-color: map-get($map: $colors, $key: "lightSuccess");
+  }
+
+  &.danger {
+    background-color: map-get($map: $colors, $key: "lighterDanger");
+    border-color: map-get($map: $colors, $key: "lightDanger");
+  }
+
+  &.warning {
+    background-color: map-get($map: $colors, $key: "lighterWarning");
+    border-color: map-get($map: $colors, $key: "lightWarning");
+  }
+
+  &.info {
+    background-color: map-get($map: $colors, $key: "lighterInfo");
+    border-color: map-get($map: $colors, $key: "lightInfo");
+  }
+
+  &.dark {
+    background-color: map-get($map: $colors, $key: "lighterDark");
+    border-color: map-get($map: $colors, $key: "lightDark");
+  }
+
+  &.light {
+    border-color: map-get($map: $colors, $key: "lightGrey");
+  }
+}
