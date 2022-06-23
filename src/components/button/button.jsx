@@ -1,13 +1,12 @@
 import "./button.scss";
 
-export const Button = ({ children, color, outline, border }) => {
-  return (
-    <button
-      className={`btn ${color !== undefined ? color : "primary"} ${
-        outline !== undefined ? outline : "none"
-      } ${border !== undefined ? border : "default"}`}
-    >
-      {children}
-    </button>
-  );
+export const Button = ({
+  children,
+  color = "primary",
+  outline = "none",
+  border = "default",
+}) => {
+  const classNames = ["btn", color, outline, border].join(" ");
+
+  return <button className={classNames}>{children}</button>;
 };
