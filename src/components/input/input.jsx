@@ -26,7 +26,7 @@ export const Input = ({
           value={value}
           type="text"
           onChange={(e) => handleChange(e)}
-          placeholder={placeholder !== undefined && placeholder}
+          placeholder={placeholder ?? ""}
           disabled={disable}
         />
         {error && <i className="fa-solid fa-circle-exclamation"></i>}
