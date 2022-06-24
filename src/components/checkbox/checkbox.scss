@@ -1,0 +1,19 @@
+@import "../../utils/color.scss";
+
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+
+    &:checked {
+      accent-color: map-get($map: $colors, $key: "primary");
+    }
+  }
+
+  label {
+    padding-left: 5px;
+  }
+}
