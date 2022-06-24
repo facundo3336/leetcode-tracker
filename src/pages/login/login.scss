@@ -1,0 +1,90 @@
+@import "../../utils/color.scss";
+
+.loginPage {
+  .loginInformationContainer {
+    margin: 0 auto;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    .loginLogo {
+      background-image: url("../../assets/img/logo-leet.png");
+      margin: 25px auto 15px auto;
+      width: 170px;
+      height: 40px;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .loginPageSubtitle {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+
+  .loginInputsContainer {
+    padding-top: 40px;
+
+    .input {
+      margin: 20px 0;
+    }
+  }
+
+  .loginButton {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .loginSignupParagraph {
+    font-size: 1.1rem;
+    display: block;
+    margin: 0 auto;
+
+    a {
+      color: map-get($map: $colors, $key: "black");
+    }
+  }
+
+  .loginImage {
+    display: none;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .loginPage {
+    display: flex;
+    min-height: 100vh;
+
+    .loginInformationContainer {
+      width: 45%;
+    }
+
+    .loginImage {
+      display: block;
+      background-image: url("../../assets/img/pc.jpeg");
+      width: 55%;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and(min-width: 1024px) {
+  .loginPage {
+    .loginInformationContainer {
+      width: 30%;
+    }
+
+    .loginImage {
+      width: 70%;
+    }
+  }
+}

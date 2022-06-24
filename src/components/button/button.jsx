@@ -5,8 +5,9 @@ export const Button = ({
   color = "primary",
   outline = "none",
   border = "default",
+  className = "",
 }) => {
-  const classNames = ["btn", color, outline, border].join(" ");
+  const classNames = ["btn", className, color, outline, border].join(" ");
 
   return <button className={classNames}>{children}</button>;
 };

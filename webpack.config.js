@@ -30,6 +30,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
+    publicPath: "/",
   },
   plugins: [new HtmlWebpackPlugin({ template: "src/index.html" })],
   module: {
@@ -37,5 +38,6 @@ module.exports = {
   },
   devServer: {
     open: true,
+    historyApiFallback: true,
   },
 };
