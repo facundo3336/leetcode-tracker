@@ -1,0 +1,70 @@
+@import "../../utils/color.scss";
+
+.input {
+  label {
+    display: block;
+    color: map-get($map: $colors, $key: "grey");
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+
+  .inputContainer {
+    border: 1px solid map-get($map: $colors, $key: "lightGrey");
+    background-color: map-get($map: $colors, $key: "lighterGrey");
+    color: map-get($map: $colors, $key: "grey");
+    display: flex;
+    align-items: center;
+    padding: 7px 15px;
+    border-radius: 5px;
+
+    &.disable {
+      background-color: map-get($map: $colors, $key: "lightGrey");
+
+      input {
+        background-color: map-get($map: $colors, $key: "lightGrey");
+      }
+    }
+
+    &.inputError {
+      border-color: map-get($map: $colors, $key: "danger");
+    }
+
+    &:focus-within {
+      border-color: map-get($map: $colors, $key: "primary");
+
+      input {
+        color: map-get($map: $colors, $key: "black");
+      }
+
+      .inputIconContainer {
+        color: map-get($map: $colors, $key: "primary");
+      }
+    }
+
+    .inputIconContainer {
+      padding-right: 7px;
+    }
+  }
+
+  input {
+    border: none;
+    background-color: map-get($map: $colors, $key: "lighterGrey");
+    color: map-get($map: $colors, $key: "grey");
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  i {
+    color: map-get($map: $colors, $key: "danger");
+    margin: 0 0 0 auto;
+  }
+
+  span {
+    display: inline-block;
+    color: map-get($map: $colors, $key: "danger");
+    padding-top: 5px;
+  }
+}
