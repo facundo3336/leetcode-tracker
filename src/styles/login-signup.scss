@@ -1,15 +1,15 @@
-@import "../../utils/color.scss";
+@import "./color.scss";
 
-.loginPage {
-  .loginInformationContainer {
+.loginSignupPage {
+  .loginSignupInformationContainer {
     margin: 0 auto;
     max-width: 350px;
     display: flex;
     flex-direction: column;
     padding: 30px;
 
-    .loginLogo {
-      background-image: url("../../assets/img/logo-leet.png");
+    .loginSignupLogo {
+      background-image: url("../assets/img/logo-leet.png");
       margin: 25px auto 15px auto;
       width: 170px;
       height: 40px;
@@ -23,13 +23,17 @@
       font-weight: 700;
     }
 
-    .loginPageSubtitle {
+    .loginSignupSubtitle {
       font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .onlySignUpsubtitleWeight {
       font-weight: 500;
     }
   }
 
-  .loginInputsContainer {
+  .loginSignupInputsContainer {
     padding-top: 40px;
 
     .input {
@@ -37,7 +41,7 @@
     }
   }
 
-  .loginButton {
+  .loginSignupButton {
     display: inline-block;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -53,23 +57,34 @@
     }
   }
 
-  .loginImage {
+  .loginSignupImage {
     display: none;
+  }
+
+  .checkboxLabel {
+    a {
+      color: map-get($map: $colors, $key: "blue");
+      text-decoration: none;
+    }
+  }
+
+  .onlySignupButtonMargin {
+    margin-bottom: 12px;
   }
 }
 
 @media screen and(min-width: 768px) {
-  .loginPage {
+  .loginSignupPage {
     display: flex;
     min-height: 100vh;
 
-    .loginInformationContainer {
+    .loginSignupInformationContainer {
       width: 45%;
     }
 
-    .loginImage {
+    .loginSignupImage {
       display: block;
-      background-image: url("../../assets/img/pc.jpeg");
+      background-image: url("../assets/img/pc.jpeg");
       width: 55%;
       background-position: center center;
       background-size: cover;
@@ -78,12 +93,12 @@
 }
 
 @media screen and(min-width: 1024px) {
-  .loginPage {
-    .loginInformationContainer {
+  .loginSignupPage {
+    .loginSignupInformationContainer {
       width: 30%;
     }
 
-    .loginImage {
+    .loginSignupImage {
       width: 70%;
     }
   }
