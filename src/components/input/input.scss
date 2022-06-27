@@ -1,11 +1,11 @@
-@import "../../utils/color.scss";
+@import "../../styles/color.scss";
 
 .input {
   label {
     display: block;
     color: map-get($map: $colors, $key: "grey");
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 600;
     padding-bottom: 10px;
   }
 

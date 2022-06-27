@@ -1,14 +1,17 @@
 import "./checkbox.scss";
 
-export const Checkbox = ({ checked, onChange, label }) => {
+export const Checkbox = ({ checked, onChange, label, extra }) => {
   function handleChange() {
     onChange(!checked);
   }
 
   return (
-    <div className="checkBoxContainer">
+    <div className="checkboxContainer">
       <input type="checkbox" onChange={handleChange} checked={checked} />
-      <label onClick={handleChange}>{label}</label>
+      <div className="checkboxLabel" onClick={handleChange}>
+        <label>{label}</label>
+        {extra}
+      </div>
     </div>
   );
 };
